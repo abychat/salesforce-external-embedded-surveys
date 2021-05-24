@@ -68,7 +68,7 @@ html {
 }
 
 .my-float {
-  font-size: 24px;
+  font-size: xx-large;
   margin-top: 18px;
 }
 
@@ -81,13 +81,4 @@ a.float + div.label-container {
 a.float:hover + div.label-container {
   visibility: visible;
   opacity: 1;
-}
-
-.far {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: xx-large;
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
