@@ -1,13 +1,3 @@
-html,
-body {
-  height: 100%;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 12px;
-}
-
 div.index-container {
   width: 100%;
   height: 100%;
@@ -33,6 +23,17 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+}
+
 **/
 
 .label-container {
@@ -86,7 +87,6 @@ a.float:hover + div.label-container {
   opacity: 1;
 }
 
-/**
 .modal.custom .modal-dialog {
   width: 20%;
   position: fixed;
@@ -94,4 +94,3 @@ a.float:hover + div.label-container {
   right: 0;
   margin: 0;
 }
-*/
