@@ -61,11 +61,10 @@ html {
   height: 60px;
   bottom: 40px;
   right: 40px;
-  background-color: #06c;
+  background-color: rgb(0, 0, 0);
   color: #fff;
   border-radius: 50px;
   text-align: center;
-  box-shadow: 2px 2px 3px #999;
 }
 
 .my-float {
@@ -82,4 +81,13 @@ a.float + div.label-container {
 a.float:hover + div.label-container {
   visibility: visible;
   opacity: 1;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: xx-large;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
