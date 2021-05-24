@@ -90,7 +90,15 @@ a.float:hover + div.label-container {
 .modal.custom .modal-dialog {
   width: 20%;
   position: fixed;
-  bottom: 200 px;
-  right: 0;
+  bottom: 100px;
+  right: 30px;
   margin: 0;
+}
+
+.modal-backdrop {
+  display: none !important;
+}
+.modal-open .modal {
+  width: 20%;
+  margin: 0 auto;
 }
