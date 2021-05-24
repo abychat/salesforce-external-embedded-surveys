@@ -6,8 +6,6 @@ var express = require("express");
 var path = require("path");
 var app = express();
 var cookieParser = require("cookie-parser");
-var request = require("request-promise");
-var jsforce = require("jsforce");
 
 //Set up App
 app.set("view engine", "ejs");
