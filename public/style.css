@@ -83,7 +83,7 @@ a.float:hover + div.label-container {
   opacity: 1;
 }
 
-.fa {
+.far {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: xx-large;
