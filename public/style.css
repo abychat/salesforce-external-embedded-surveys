@@ -101,8 +101,5 @@ a.float:hover + div.label-container {
 .modal-open .modal {
   width: 20%;
   margin: 0 auto;
-}
-
-.modal {
   overflow-y: auto;
 }
