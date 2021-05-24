@@ -6,7 +6,7 @@
   "keywords": ["node", "express", "heroku", "salesforce"],
   "image": "heroku/nodejs",
   "env": {
-    "BG_FAKE": {
+    "heroku": {
       "description": "The URL for the Fake website background",
       "value": "Your value here"
     }
