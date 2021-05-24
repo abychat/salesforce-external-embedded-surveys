@@ -57,9 +57,9 @@ html {
 
 .float {
   position: fixed;
-  width: 100px;
-  height: 100px;
-  bottom: 40px;
+  width: 155px;
+  height: 50px;
+  bottom: 30px;
   right: 40px;
   background-color: rgb(0, 0, 0);
   color: #fff;
