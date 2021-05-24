@@ -86,6 +86,7 @@ a.float:hover + div.label-container {
   opacity: 1;
 }
 
+/**
 .modal.custom .modal-dialog {
   width: 20%;
   position: fixed;
@@ -93,3 +94,4 @@ a.float:hover + div.label-container {
   right: 0;
   margin: 0;
 }
+*/
