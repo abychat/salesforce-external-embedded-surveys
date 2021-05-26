@@ -112,3 +112,7 @@ a.float:hover + div.label-container {
 .modal-open {
   overflow-y: auto;
 }
+
+iframe {
+  width: 100%;
+}
