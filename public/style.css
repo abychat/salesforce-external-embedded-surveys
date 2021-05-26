@@ -88,12 +88,17 @@ a.float:hover + div.label-container {
 }
 
 .modal.custom .modal-dialog {
-  width: 40%;
-  height: 400px;
+  width: 50%;
+  height: 500px;
   position: fixed;
   bottom: 100px;
   right: 30px;
   margin: 0;
+}
+
+.modal-body {
+  height: 495px;
+  width: 100%;
 }
 
 .modal-backdrop {
