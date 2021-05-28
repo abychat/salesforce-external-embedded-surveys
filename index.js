@@ -51,10 +51,11 @@ app.get("/", async function (req, res) {
     };
     await initConnection();
     conn.apex.post("/SurveyLink/", body, function (err, res) {
+      console.log(res);
       if (err) {
         return console.error(err);
       }
-      surveyUrl = res.body;
+      surveyUrl = res;
       console.log(surveyUrl);
     });
   }
