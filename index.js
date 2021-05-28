@@ -43,22 +43,24 @@ const initConnection = async () => {
 };
 //Routes
 app.get("/", async function (req, res) {
-  let surveyUrl = SURVEY_URL;
+  let surveyUrl;
   if (SURVEY_HAS_CONTACT.toUpperCase() === "YES" && CONTACT_ID) {
     console.log("inside SURBEY HAS CONTACT");
     const body = {
       contactId: CONTACT_ID,
     };
     await initConnection();
-    conn.apex.post("/SurveyLink/", body, function (err, res) {
-      console.log(res);
+    await conn.apex.post("/SurveyLink/", body, function (err, res) {
       if (err) {
         return console.error(err);
       }
       surveyUrl = res;
       console.log(surveyUrl);
     });
+  } else {
+    surveyUrl = SURVEY_URL;
   }
+  console.log(surveyUrl);
   res.render("index", {
     background: BG_FAKE,
     surveyUrl: surveyUrl,
