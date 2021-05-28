@@ -1,6 +1,6 @@
 {
-  "name": "Salesforce Embedded Login Example",
-  "description": "An end-to-end example of Salesforce Embedded Log In, leveraging the Salesforce Identity for Customers (CIAM) product",
+  "name": "Salesforce Embedded Survey Example",
+  "description": "An example of using Surveys in an iframe on a 3rd party website ",
   "repository": "https://github.com/abychat/salesforce-embedded-login-example.git",
   "logo": "",
   "keywords": ["node", "express", "heroku", "salesforce"],
