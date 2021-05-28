@@ -45,6 +45,7 @@ const initConnection = async () => {
 app.get("/", async function (req, res) {
   let surveyUrl = SURVEY_URL;
   if (SURVEY_HAS_CONTACT.toUpperCase() === "YES" && CONTACT_ID) {
+    console.log("inside SURBEY HAS CONTACT");
     const body = {
       contactId: CONTACT_ID,
     };
@@ -54,6 +55,7 @@ app.get("/", async function (req, res) {
         return console.error(err);
       }
       surveyUrl = res.body;
+      console.log(surveyUrl);
     });
   }
   res.render("index", {
