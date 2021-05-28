@@ -42,7 +42,7 @@ const initConnection = async () => {
   }
 };
 //Routes
-app.get("/", function (req, res) {
+app.get("/", async function (req, res) {
   let surveyUrl = SURVEY_URL;
   if (SURVEY_HAS_CONTACT.toUpperCase() === "YES" && CONTACT_ID) {
     const body = {
