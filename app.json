@@ -13,6 +13,14 @@
     "SURVEY_URL": {
       "description": "The URL for the Survey Invitation",
       "value": "Your value here"
+    },
+    "BUTTON_CLASS": {
+      "description": "The Bootstrap class for th button color - Choose from btn-primary btn-secondary btn-success btn-warning btn-success btn-danger btn-warning btn-info btn-light btn-dark btn-link",
+      "value": "btn-dark"
+    },
+    "BUTTON_TEXT": {
+      "description": "The label for the Floating Feedback Button",
+      "value": "+ Feedback"
     }
   }
 }
