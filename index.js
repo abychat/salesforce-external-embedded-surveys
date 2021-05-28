@@ -55,12 +55,10 @@ app.get("/", async function (req, res) {
         return console.error(err);
       }
       surveyUrl = res;
-      console.log(surveyUrl);
     });
   } else {
     surveyUrl = SURVEY_URL;
   }
-  console.log(surveyUrl);
   res.render("index", {
     background: BG_FAKE,
     surveyUrl: surveyUrl,

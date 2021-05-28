@@ -21,6 +21,30 @@
     "BUTTON_TEXT": {
       "description": "The label for the Floating Feedback Button",
       "value": "+ Feedback"
+    },
+    "PRIVATE_KEY": {
+      "description": "The Private KEY for the Ceritifcate used in the Connected App",
+      "value": "Value"
+    },
+    "LOGIN_URL": {
+      "description": "The URL for the Salesforce org",
+      "value": "https://login.salesforce.com"
+    },
+    "USERNAME": {
+      "description": "The user name of the Salesforce integration user",
+      "value": "value"
+    },
+    "CLIENT_ID": {
+      "description": "Consumer Key from the Connected App",
+      "value": "Value"
+    },
+    "SURVEY_HAS_CONTACT": {
+      "description": "Is the Survey related to a Contact? If not the Survey URL above is required (YES or NO)",
+      "value": "NO"
+    },
+    "CONTACT_ID": {
+      "description": "The Id of the Contact Record to which the Feedback must be related",
+      "value": "Value"
     }
   }
 }
