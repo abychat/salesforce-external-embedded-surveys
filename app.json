@@ -24,22 +24,22 @@
       "value": "+ Feedback"
     },
     "PRIVATE_KEY": {
-      "description": "The Private KEY for the Ceritifcate used in the Connected App",
+      "description": "The Private KEY for the Ceritifcate used in the Connected App [REQUIRED if SURVEY_HAS_CONTACT = YES]",
       "value": "Value",
       "required": false
     },
     "LOGIN_URL": {
-      "description": "The URL for the Salesforce org",
+      "description": "The URL for the Salesforce org [REQUIRED if SURVEY_HAS_CONTACT = YES]",
       "value": "https://login.salesforce.com",
       "required": false
     },
     "USERNAME": {
-      "description": "The user name of the Salesforce integration user",
+      "description": "The user name of the Salesforce integration user [REQUIRED if SURVEY_HAS_CONTACT = YES]",
       "value": "value",
       "required": false
     },
     "CLIENT_ID": {
-      "description": "Consumer Key from the Connected App",
+      "description": "Consumer Key from the Connected App [REQUIRED if SURVEY_HAS_CONTACT = YES]",
       "value": "Value",
       "required": false
     },
@@ -48,17 +48,27 @@
       "value": "NO"
     },
     "CONTACT_ID": {
-      "description": "The Id of the Contact Record to which the Feedback must be related",
+      "description": "The Id of the Contact Record to which the Feedback must be related [REQUIRED if SURVEY_HAS_CONTACT = YES]",
       "value": "Value",
       "required": false
     },
-    "MODAL_HEIGHT" : {
+    "MODAL_HEIGHT": {
       "description": "The height of the Feedback Modal",
       "value": "800"
     },
     "IFRAME_HEIGHT": {
       "description": "The height of the Iframe within the Modal (recommended to be -50 of MODAL HEIGHT",
       "value": "750"
+    },
+    "SURVEY_ID": {
+      "description": "The Id of the Survey for which an individual survey link has to be generated [REQUIRED if SURVEY_HAS_CONTACT = YES]",
+      "value": "Survey ID",
+      "required": false
+    },
+    "COMMUNITY_ID": {
+      "description": "The Id of the Community to which the individual survey link will be tied to [REQUIRED if SURVEY_HAS_CONTACT = YES]",
+      "value": "Community ID",
+      "required": false
     }
   }
 }

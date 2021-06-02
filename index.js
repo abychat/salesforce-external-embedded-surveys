@@ -18,6 +18,8 @@ const BUTTON_CLASS = process.env.BUTTON_CLASS;
 const BUTTON_TEXT = process.env.BUTTON_TEXT;
 const SURVEY_HAS_CONTACT = process.env.SURVEY_HAS_CONTACT;
 const CONTACT_ID = process.env.CONTACT_ID;
+const SURVEY_ID = process.env.SURVEY_ID;
+const COMMUNITY_ID = process.env.COMMUNITY_ID;
 
 let jwttoken;
 const conn = new jsforce.Connection();
@@ -43,10 +45,16 @@ const initConnection = async () => {
 //Routes
 app.get("/", async function (req, res) {
   let surveyUrl;
-  if (SURVEY_HAS_CONTACT.toUpperCase() === "YES" && CONTACT_ID) {
-    console.log("inside SURBEY HAS CONTACT");
+  if (
+    SURVEY_HAS_CONTACT.toUpperCase() === "YES" &&
+    CONTACT_ID &&
+    SURVEY_ID &&
+    COMMUNITY_ID
+  ) {
     const body = {
       contactId: CONTACT_ID,
+      surveyId: SURVEY_ID,
+      communityId: COMMUNITY_ID,
     };
     await initConnection();
     await conn.apex.post("/SurveyLink/", body, function (err, res) {
@@ -67,7 +75,6 @@ app.get("/", async function (req, res) {
     iframeHeight: "height:" + process.env.IFRAME_HEIGHT + "px",
   });
 });
-
 //Run
 app.listen(PORT, function () {
   console.log("Listening on Port " + PORT);
