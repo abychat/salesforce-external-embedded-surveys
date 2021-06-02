@@ -1,7 +1,7 @@
 # To Do
 
-The entire Read Me :) 
+The entire Read Me :)
 
 # Heroku Button
 
-[![One-Click Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/SFDC-Assets/salesforce-external-embedded-surveys)

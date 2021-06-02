@@ -1,7 +1,7 @@
 {
   "name": "Salesforce Embedded Survey Example",
   "description": "An example of using Surveys in an iframe on a 3rd party website ",
-  "repository": "https://github.com/abychat/salesforce-embedded-login-example.git",
+  "repository": "https://github.com/SFDC-Assets/salesforce-external-embedded-surveys.git",
   "logo": "",
   "keywords": ["node", "express", "heroku", "salesforce"],
   "image": "heroku/nodejs",
@@ -12,7 +12,8 @@
     },
     "SURVEY_URL": {
       "description": "The URL for the Survey Invitation",
-      "value": "Your value here"
+      "value": "Your value here",
+      "required": false
     },
     "BUTTON_CLASS": {
       "description": "The Bootstrap class for th button color - Choose from btn-primary btn-secondary btn-success btn-warning btn-success btn-danger btn-warning btn-info btn-light btn-dark btn-link",
@@ -24,19 +25,23 @@
     },
     "PRIVATE_KEY": {
       "description": "The Private KEY for the Ceritifcate used in the Connected App",
-      "value": "Value"
+      "value": "Value",
+      "required": false
     },
     "LOGIN_URL": {
       "description": "The URL for the Salesforce org",
-      "value": "https://login.salesforce.com"
+      "value": "https://login.salesforce.com",
+      "required": false
     },
     "USERNAME": {
       "description": "The user name of the Salesforce integration user",
-      "value": "value"
+      "value": "value",
+      "required": false
     },
     "CLIENT_ID": {
       "description": "Consumer Key from the Connected App",
-      "value": "Value"
+      "value": "Value",
+      "required": false
     },
     "SURVEY_HAS_CONTACT": {
       "description": "Is the Survey related to a Contact? If not the Survey URL above is required (YES or NO)",
@@ -44,7 +49,8 @@
     },
     "CONTACT_ID": {
       "description": "The Id of the Contact Record to which the Feedback must be related",
-      "value": "Value"
+      "value": "Value",
+      "required": false
     }
   }
 }
