@@ -11,7 +11,7 @@
       "value": "Your value here"
     },
     "SURVEY_URL": {
-      "description": "The URL for the Survey Invitation [REQUIRED if SURVEY_HAS_CONTACT is set to NO",
+      "description": "The URL for the Survey Invitation [REQUIRED if SURVEY_HAS_CONTACT is set to NO]",
       "value": "Your value here",
       "required": false
     },
@@ -44,13 +44,21 @@
       "required": false
     },
     "SURVEY_HAS_CONTACT": {
-      "description": "Is the Survey related to a Contact? If not the Survey URL above is required (YES or NO)",
+      "description": "Is the Survey related to a Contact (YES or NO)? If not the Survey URL is required. ",
       "value": "NO"
     },
     "CONTACT_ID": {
       "description": "The Id of the Contact Record to which the Feedback must be related",
       "value": "Value",
       "required": false
+    },
+    "MODAL_HEIGHT" : {
+      "description": "The height of the Feedback Modal",
+      "value": "800"
+    },
+    "IFRAME_HEIGHT": {
+      "description": "The height of the Iframe within the Modal (recommended to be -50 of MODAL HEIGHT",
+      "value": "750"
     }
   }
 }
