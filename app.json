@@ -11,7 +11,7 @@
       "value": "Your value here"
     },
     "SURVEY_URL": {
-      "description": "The URL for the Survey Invitation",
+      "description": "The URL for the Survey Invitation [REQUIRED if SURVEY_HAS_CONTACT is set to NO",
       "value": "Your value here",
       "required": false
     },
