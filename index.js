@@ -29,8 +29,6 @@ const initConnection = async () => {
       sub: process.env.USERNAME,
       aud: process.env.LOGIN_URL,
       privateKey: process.env.PRIVATE_KEY,
-      modalHeight: "height:" + process.env.MODAL_HEIGHT + "px",
-      iframeHeight: "height:" + process.env.IFRAME_HEIGHT + "px",
     });
 
     conn.initialize({
@@ -65,6 +63,8 @@ app.get("/", async function (req, res) {
     surveyUrl: surveyUrl,
     buttonClass: BUTTON_CLASS,
     buttonText: BUTTON_TEXT,
+    modalHeight: "height:" + process.env.MODAL_HEIGHT + "px",
+    iframeHeight: "height:" + process.env.IFRAME_HEIGHT + "px",
   });
 });
 
