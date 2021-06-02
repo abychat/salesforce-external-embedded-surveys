@@ -1,7 +1,7 @@
 {
   "name": "Salesforce Embedded Survey Example",
   "description": "An example of using Surveys in an iframe on a 3rd party website ",
-  "repository": "https://github.com/SFDC-Assets/salesforce-external-embedded-surveys",
+  "repository": "https://github.com/SFDC-Assets/salesforce-external-embedded-surveys.git",
   "logo": "",
   "keywords": ["node", "express", "heroku", "salesforce"],
   "image": "heroku/nodejs",
