@@ -29,8 +29,8 @@ const initConnection = async () => {
       sub: process.env.USERNAME,
       aud: process.env.LOGIN_URL,
       privateKey: process.env.PRIVATE_KEY,
-      modalHeight: process.env.MODAL_HEIGHT,
-      iframeHeight: process.env.IFRAME_HEIGHT,
+      modalHeight: "height:" + process.env.MODAL_HEIGHT + "px",
+      iframeHeight: "height:" + process.env.IFRAME_HEIGHT + "px",
     });
 
     conn.initialize({

@@ -28,9 +28,9 @@
       data-keyboard="false"
       data-backdrop="static"
     >
-      <div class="modal-dialog" style="height: <%= modalHeight%>px">
+      <div class="modal-dialog" style="<%= modalHeight%>">
         <div class="modal-content">
-          <div class="modal-body" style="height: <%= modalHeight%>px">
+          <div class="modal-body" style="<%= modalHeight%>">
             <div style="float: right">
               <button
                 type="button"
@@ -42,7 +42,7 @@
             <iframe
               id="myIframe"
               src="<%= surveyUrl%>"
-              style="height: <%= iframeHeight%>px"
+              style="<%= iframeHeight%>"
             ></iframe>
           </div>
         </div>
