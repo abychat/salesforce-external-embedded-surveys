@@ -21,7 +21,7 @@ Deploy the app by clicking this button
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-** [Add the URL of the website that hosts the survey as a trusted website.](https://help.salesforce.com/articleView?id=task_chat_trusted_site.htm&type=5)**
+**[Add the URL of the website that hosts the survey as a trusted website.](https://help.salesforce.com/articleView?id=task_chat_trusted_site.htm&type=5)**
 
 
 # Required Configuration Variables for the Heroku App
@@ -39,7 +39,7 @@ Deploy the app by clicking this button
 
 # Salesforce Connected App Set Up for Individual Surveys
 
-When distributin surveys, you can use a generic survey link for external participants and not require authentication or you can generate an individual link for a survey that is associated with a contact record. The app supports both scenarios.
+When distributing surveys, you can use a generic survey link for external participants and not require authentication or you can generate an individual link for a survey that is associated with a contact record. The app supports both scenarios.
 
 Survey Links generated for individual contacts typically involves the survey being distributed via email or the survey being delivered in a Salesforce experience where the custome is logged in. Given that this is a third party website, a survey link is generated dynamically via an API call to a custom apex service and dynamically supplied to the iframe.
 
