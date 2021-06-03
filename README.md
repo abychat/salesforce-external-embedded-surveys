@@ -7,6 +7,7 @@ The app allows you to quickly spin up a web app with a fake background that woul
 The survey appears in a floating button on the bottom right corner of the screen that opens a modal that displays the survey when clicked. You can control the look and feel of the button, the button text and the height of the modal via config vars for the Heroku App.
 
 A live example of the app can be seen @ https://ac-embedded-surveys.herokuapp.com/
+![image](https://user-images.githubusercontent.com/7586106/120673946-7b48f380-c448-11eb-8240-22efa380102a.png)
 
 # Prerequisites
 
