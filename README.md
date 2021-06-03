@@ -23,7 +23,6 @@ Deploy the app by clicking this button
 
 **[Add the URL of the website that hosts the survey as a trusted website.](https://help.salesforce.com/articleView?id=task_chat_trusted_site.htm&type=5)**
 
-
 # Required Configuration Variables for the Heroku App
 
 1. **BG_FAKE** - The URL for the image of the Fake website background. The image URL should be publically accessible.
@@ -69,11 +68,11 @@ Once you have generated the ceritifcate and private key set up the connect up by
 14. Click Save.
 15. Click Manage Profiles and/or click Manage Permission Sets. Select the profiles and permission sets that are pre-authorized to use this connected app. Create permission sets if necessary.
 
-# Install Apex Service for Individual
+# Install Apex Service for generates the Individual Survey Link
 
-[Install the Apex Service that generates an Individual Survey Link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e0000005htQAAQ)
+[Apex Service Package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e0000005htQAAQ)
 
-# Additional Configuration Variables for the Heroku App 
+# Additional Configuration Variables for the Heroku App
 
 1. **CLIENT_ID** - Consumer Key from the Connected App
 2. **COMMUNITY_ID** - The Id of the Community to which the individual survey link will be tied to.
@@ -83,4 +82,4 @@ Once you have generated the ceritifcate and private key set up the connect up by
 6. **SURVEY_ID** - The Id of the Survey for which an individual survey link has to be generated.
 7. **USERNAME** - The user name of the Salesforce integration user or Admin user to make the call to the Apex Service.
 
--
+An example site tied to the contact Bill Blau can be found here - https://ac-survey-with-contact.herokuapp.com/
