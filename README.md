@@ -68,7 +68,7 @@ Once you have generated the ceritifcate and private key set up the connect up by
 14. Click Save.
 15. Click Manage Profiles and/or click Manage Permission Sets. Select the profiles and permission sets that are pre-authorized to use this connected app. Create permission sets if necessary.
 
-# Install Apex Service for generates the Individual Survey Link
+# Install Apex Service for generating the Individual Survey Link
 
 [Apex Service Package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e0000005htQAAQ)
 
