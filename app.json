@@ -57,7 +57,7 @@
       "value": "800"
     },
     "IFRAME_HEIGHT": {
-      "description": "The height of the Iframe within the Modal (recommended to be -50 of MODAL HEIGHT",
+      "description": "The height of the Iframe within the Modal (recommended to be -50 of MODAL HEIGHT)",
       "value": "750"
     },
     "SURVEY_ID": {
