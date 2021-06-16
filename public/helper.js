@@ -3,10 +3,11 @@ var iframe = document.getElementById("myIframe");
 // Adjusting the iframe height onload event
 iframe.onload = function () {
   //iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+  console.log(mobileCheck());
   console.log(iframe.style.height);
 };
 
-window.mobileCheck = function () {
+const mobileCheck = function () {
   let check = false;
   (function (a) {
     if (
