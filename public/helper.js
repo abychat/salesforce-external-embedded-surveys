@@ -1,11 +1,11 @@
-var iframe = document.getElementById("myIframe");
+// var iframe = document.getElementById("myIframe");
 
-// Adjusting the iframe height onload event
-iframe.onload = function () {
-  //iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-  console.log(mobileCheck());
-  console.log(iframe.style.height);
-};
+// // Adjusting the iframe height onload event
+// iframe.onload = function () {
+//   //iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+//   console.log(mobileCheck());
+//   console.log(iframe.style.height);
+// };
 
 const mobileCheck = function () {
   let check = false;
@@ -21,4 +21,35 @@ const mobileCheck = function () {
       check = true;
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
+};
+
+const setModalDialogStyle = function (suppliedHeight) {
+  let style = "";
+  if (!mobileCheck()) {
+    style = "height:" + suppliedHeight + "px";
+  } else if (mobileCheck()) {
+    style = "height:650px;width:370px;right:2px";
+  }
+  return style;
+};
+
+const setModalBodyStyle = function (suppliedHeight) {
+  let style = "";
+  if (!mobileCheck()) {
+    style = "height:" + suppliedHeight + "px";
+  } else if (mobileCheck()) {
+    style =
+      "height:650px;width:100%;padding-left: 0.5rem !important;overflow-y: auto";
+  }
+  return style;
+};
+
+const setIframeStyle = function (suppliedHeight) {
+  let style = "";
+  if (!mobileCheck()) {
+    style = "height:" + suppliedHeight + "px";
+  } else if (mobileCheck()) {
+    style = "width: 350px;height: 600px;";
+  }
+  return style;
 };

@@ -71,8 +71,10 @@ app.get("/", async function (req, res) {
     surveyUrl: surveyUrl,
     buttonClass: BUTTON_CLASS,
     buttonText: BUTTON_TEXT,
-    modalHeight: "height:" + process.env.MODAL_HEIGHT + "px",
-    iframeHeight: "height:" + process.env.IFRAME_HEIGHT + "px",
+    // modalHeight: "height:" + process.env.MODAL_HEIGHT + "px",
+    // iframeHeight: "height:" + process.env.IFRAME_HEIGHT + "px",
+    modalHeight: process.env.MODAL_HEIGHT,
+    iframeHeight: process.env.IFRAME_HEIGHT,
   });
 });
 //Run

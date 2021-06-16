@@ -16,6 +16,7 @@
       src="https://kit.fontawesome.com/b6e13b7e90.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/helper.js"></script>
   </head>
   <body>
     <!-- Modal -->
@@ -28,9 +29,9 @@
       data-keyboard="false"
       data-backdrop="static"
     >
-      <div class="modal-dialog" style="<%= modalHeight%>">
+      <div class="modal-dialog" onload="setModalDialogStyle(<%= modalHeight%>)">
         <div class="modal-content">
-          <div class="modal-body" style="<%= modalHeight%>">
+          <div class="modal-body" onload="setModalBodyStyle(<%= modalHeight%>)">
             <div style="float: right">
               <button
                 type="button"
@@ -42,7 +43,7 @@
             <iframe
               id="myIframe"
               src="<%= surveyUrl%>"
-              style="<%= iframeHeight%>"
+              onload="setIframeStyle(<%= iframeHeight%>)"
             ></iframe>
           </div>
         </div>
@@ -65,6 +66,5 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
-    <script src="/helper.js"></script>
   </body>
 </html>
