@@ -1,5 +1,7 @@
 var iframe = document.getElementById("myIframe");
 
+console.log(process.env.MODAL_HEIGHT);
+
 // Adjusting the iframe height onload event
 iframe.onload = function () {
   iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
