@@ -41,7 +41,7 @@ const setModalBodyStyle = function (suppliedHeight, isMobile) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
     style =
-      "height:600px;width:100%;padding-left: 0.5rem !important;overflow-y: auto";
+      "height:580px;width:100%;padding-left: 0.5rem !important;overflow-y: auto";
   }
   modalBody.style = style;
 };
@@ -52,7 +52,7 @@ const setIframeStyle = function (suppliedHeight, isMobile) {
   if (!isMobile) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
-    style = "width: 350px;height: 580px;";
+    style = "width: 350px;height: 550px;";
   }
   iframe.style = style;
 };
