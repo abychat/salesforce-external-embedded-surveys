@@ -23,7 +23,7 @@ const mobileCheck = function () {
   return check;
 };
 
-const height = window.innerHeight - 250;
+const height = window.innerHeight - 100;
 const modalHeight = height - 50;
 
 const setModalDialogStyle = function (suppliedHeight, isMobile) {
