@@ -23,13 +23,15 @@ const mobileCheck = function () {
   return check;
 };
 
+const height = window.innerHeight - 250;
+const modalHeight = height - 50;
+
 const setModalDialogStyle = function (suppliedHeight, isMobile) {
   const modalDialog = document.getElementById("modalDialog");
   let style = "";
   if (!isMobile) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
-    let height = window.innerHeight - 250;
     style = "height:" + height + "px;width:370px;right:2px;bottom:80px;";
     //style = "height:630px;width:370px;right:2px;bottom:80px;";
   }
@@ -42,7 +44,6 @@ const setModalBodyStyle = function (suppliedHeight, isMobile) {
   if (!isMobile) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
-    let height = window.innerHeight - 250;
     style =
       "height:" +
       height +
@@ -58,9 +59,8 @@ const setIframeStyle = function (suppliedHeight, isMobile) {
   if (!isMobile) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
-    let height = window.innerHeight - 300;
     //style = "width: 350px;height: 530px;";
-    style = "width: 350px;height:" + height + "px;";
+    style = "width: 350px;height:" + modalHeight + "px;";
   }
   iframe.style = style;
 };
