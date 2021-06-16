@@ -29,7 +29,7 @@ const setModalDialogStyle = function (suppliedHeight, isMobile) {
   if (!isMobile) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
-    style = "height:630px;width:370px;right:2px";
+    style = "height:630px;width:370px;right:2px;bottom:80px;";
   }
   modalDialog.style = style;
 };
@@ -52,7 +52,7 @@ const setIframeStyle = function (suppliedHeight, isMobile) {
   if (!isMobile) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
-    style = "width: 350px;height: 550px;";
+    style = "width: 350px;height: 530px;";
   }
   iframe.style = style;
 };
