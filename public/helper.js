@@ -29,7 +29,7 @@ const setModalDialogStyle = function (suppliedHeight, isMobile) {
   if (!isMobile) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
-    style = "height:650px;width:370px;right:2px";
+    style = "height:630px;width:370px;right:2px";
   }
   modalDialog.style = style;
 };
@@ -41,7 +41,7 @@ const setModalBodyStyle = function (suppliedHeight, isMobile) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
     style =
-      "height:650px;width:100%;padding-left: 0.5rem !important;overflow-y: auto";
+      "height:630px;width:100%;padding-left: 0.5rem !important;overflow-y: auto";
   }
   modalBody.style = style;
 };
