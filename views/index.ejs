@@ -18,7 +18,7 @@
     ></script>
     <script src="/helper.js"></script>
   </head>
-  <body>
+  <body onload="setStyles(<%= modalHeight%>,<%= iframeHeight%> )">
     <!-- Modal -->
     <div
       class="modal custom"
@@ -29,9 +29,9 @@
       data-keyboard="false"
       data-backdrop="static"
     >
-      <div class="modal-dialog" onload="setModalDialogStyle(<%= modalHeight%>)">
+      <div class="modal-dialog" id="modalDialog">
         <div class="modal-content">
-          <div class="modal-body" onload="setModalBodyStyle(<%= modalHeight%>)">
+          <div class="modal-body" id="modalBody">
             <div style="float: right">
               <button
                 type="button"
@@ -40,11 +40,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <iframe
-              id="myIframe"
-              src="<%= surveyUrl%>"
-              onload="setIframeStyle(<%= iframeHeight%>)"
-            ></iframe>
+            <iframe id="myIframe" src="<%= surveyUrl%>"></iframe>
           </div>
         </div>
       </div>

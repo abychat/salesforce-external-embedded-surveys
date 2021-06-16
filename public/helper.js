@@ -2,7 +2,7 @@
 
 // // Adjusting the iframe height onload event
 // iframe.onload = function () {
-//   //iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+//   iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
 //   console.log(mobileCheck());
 //   console.log(iframe.style.height);
 // };
@@ -23,33 +23,43 @@ const mobileCheck = function () {
   return check;
 };
 
-const setModalDialogStyle = function (suppliedHeight) {
+const setModalDialogStyle = function (suppliedHeight, isMobile) {
+  const modalDialog = document.getElementById("modalDialog");
   let style = "";
-  if (!mobileCheck()) {
+  if (!isMobile) {
     style = "height:" + suppliedHeight + "px";
-  } else if (mobileCheck()) {
+  } else if (isMobile) {
     style = "height:650px;width:370px;right:2px";
   }
-  return style;
+  modalDialog.style = style;
 };
 
 const setModalBodyStyle = function (suppliedHeight) {
+  const modalBody = document.getElementById("modalBody");
   let style = "";
-  if (!mobileCheck()) {
+  if (!isMobile) {
     style = "height:" + suppliedHeight + "px";
-  } else if (mobileCheck()) {
+  } else if (isMobile) {
     style =
       "height:650px;width:100%;padding-left: 0.5rem !important;overflow-y: auto";
   }
-  return style;
+  modalBody.style = style;
 };
 
-const setIframeStyle = function (suppliedHeight) {
+const setIframeStyle = function (suppliedHeight, isMobile) {
+  const iframe = document.getElementById("myIframe");
   let style = "";
-  if (!mobileCheck()) {
+  if (!isMobile) {
     style = "height:" + suppliedHeight + "px";
-  } else if (mobileCheck()) {
+  } else if (isMobile) {
     style = "width: 350px;height: 600px;";
   }
-  return style;
+  iframe.style = style;
+};
+
+const setStyles = function (modalHeight, iframeHeight) {
+  const isMobile = mobileCheck();
+  setModalDialogStyle(modalHeight, isMobile);
+  setModalBodyStyle(modalHeight, isMobile);
+  setIframeStyle(modalHeight, isMobile);
 };
