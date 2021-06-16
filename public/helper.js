@@ -57,8 +57,23 @@ const setIframeStyle = function (suppliedHeight, isMobile) {
   iframe.style = style;
 };
 
-const setStyles = function (modalHeight, iframeHeight) {
+const setBgImage = function (background, mobileBackground, isMobile) {
+  const bgimg = document.getElementById("bgimg");
+  if (!isMobile) {
+    bgimg.src = background;
+  } else if (isMobile) {
+    bgimg.src = mobileBackground;
+  }
+};
+
+const setStyles = function (
+  modalHeight,
+  iframeHeight,
+  background,
+  mobileBackground
+) {
   const isMobile = mobileCheck();
+  setBgImage(background, mobileBackground, isMobile);
   setModalDialogStyle(modalHeight, isMobile);
   setModalBodyStyle(modalHeight, isMobile);
   setIframeStyle(iframeHeight, isMobile);
