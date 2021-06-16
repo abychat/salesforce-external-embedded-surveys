@@ -61,7 +61,7 @@ const initConnection = async () => {
 //Routes
 app.get("/", async function (req, res) {
   let surveyUrl;
-  console.log(mobileCheck);
+  console.log(mobileCheck());
   if (
     SURVEY_HAS_CONTACT.toUpperCase() === "YES" &&
     CONTACT_ID &&
