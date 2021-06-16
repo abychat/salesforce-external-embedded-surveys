@@ -34,7 +34,7 @@ const setModalDialogStyle = function (suppliedHeight, isMobile) {
   modalDialog.style = style;
 };
 
-const setModalBodyStyle = function (suppliedHeight) {
+const setModalBodyStyle = function (suppliedHeight, isMobile) {
   const modalBody = document.getElementById("modalBody");
   let style = "";
   if (!isMobile) {
@@ -61,5 +61,5 @@ const setStyles = function (modalHeight, iframeHeight) {
   const isMobile = mobileCheck();
   setModalDialogStyle(modalHeight, isMobile);
   setModalBodyStyle(modalHeight, isMobile);
-  setIframeStyle(modalHeight, isMobile);
+  setIframeStyle(iframeHeight, isMobile);
 };
