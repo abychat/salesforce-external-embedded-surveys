@@ -49,7 +49,7 @@ const safariCheck = function () {
 
 const height = window.innerHeight - 100;
 const modalHeight = height - 50;
-const safariHeight = window.innerHeight - 300;
+const safariHeight = window.innerHeight - 150;
 const safariModalHeight = safariHeight - 50;
 
 const setModalDialogStyle = function (
