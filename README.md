@@ -11,9 +11,15 @@ A live example of the app can be seen @ https://ac-embedded-surveys.herokuapp.co
 # Prerequisites
 
 - Salesforce Feedback Management License provisioned in your org
-- An active survey to be displayed on the website.
+- An active survey to be displayed on the website
 - A Heroku account
 - A Connected app with a digital certificate & Private key if you want to generate unique invitations for a contact and track their responses
+
+# Mobile Support
+
+- This app can be demoed from Desktop, Tablets and Mobile Phones.
+- Tested on iPad Pro (10.5 inch - best demoed in Landscapre orientation), iPhone XS and Samasung Galaxy S10(best demoed in Portrait for both).
+- **NOTE** - Smartphone Demo - Please supply an image for the BG_FAKE_MOBILE config var if you are planning to demo from mobile phone. The app will automatically switch between images for desktop and mobile based on form factor.
 
 # Heroku Button
 
@@ -33,6 +39,13 @@ Deploy the app by clicking this button
 6. **SURVEY_HAS_CONTACT** - Value that indicates whether the Survey is an Individual Survey or a generic survey. Valid values are YES or NO.
 7. **SURVEY_URL** - The URL for the survey if the value for **6** is NO.
 8. Follow the instructions in the rest of the README file if the answer to **6** is **YES**.
+
+# Tips for Hosting High Quality Background Images
+
+- [Install the Go Full Page Screen Capture Chrome Extension](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl?hl=en)
+- Use the tool to take full screen capture for laptop/desktop as well as in [mobile responsive view using Chrome Developer Tools](https://developer.chrome.com/docs/devtools/device-mode/).
+- Upload both the pictures to your Google Photos account (work or personal).
+- Follow the instructions here to generate a URL for each Google Photo that can be used for the BG_FAKE and BG_FAKE_MOBILE config vars. Use only the value of the **src** atribute from the generated embed code. For example a generated code on the website could look like the following. 2Fz6Fn5zq_hh75oNLsyNqyGSHzPopHojN77Eu6GImw_3bb4JteONR_K8lnCY2nRbZQV9RD7ACVYvTHEEoW6oGt2GNkAVXzsGdHl1XI9JWwr9ojo3N7t5mYgqaux8lESdvi4mJTti4Ok=w2400?source=screenshot.guru"> <img src="**https://lh3.googleusercontent.com/2Fz6Fn5zq_hh75oNLsyNqyGSHzPopHojN77Eu6GImw_3bb4JteONR_K8lnCY2nRbZQV9RD7ACVYvTHEEoW6oGt2GNkAVXzsGdHl1XI9JWwr9ojo3N7t5mYgqaux8lESdvi4mJTti4Ok=w600-h315-p-k**" /> </a>
 
 # FOLLOW THESE STEPS IF YOU WANT TO GENERATE INDIVIDUAL SURVEYS FOR CONTACTS
 
