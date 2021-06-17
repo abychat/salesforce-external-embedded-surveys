@@ -49,8 +49,8 @@ const safariCheck = function () {
 
 const height = window.innerHeight - 100;
 const modalHeight = height - 50;
-const safariHeight = window.innerHeight - 150;
-const safariModalHeight = safariHeight - 50;
+// const safariHeight = window.innerHeight - 150;
+// const safariModalHeight = safariHeight - 50;
 
 const setModalDialogStyle = function (
   suppliedHeight,
@@ -68,9 +68,7 @@ const setModalDialogStyle = function (
     style = "height:" + height + "px;";
   } else if (isSafari) {
     style =
-      "height:" +
-      (safariHeight > suppliedHeight ? suppliedHeight : safariHeight) +
-      "px;";
+      "height:" + (height > suppliedHeight ? suppliedHeight : height) + "px;";
   }
   modalDialog.style = style;
 };
@@ -94,9 +92,7 @@ const setModalBodyStyle = function (
     style = "height:" + height + "px;";
   } else if (isSafari) {
     style =
-      "height:" +
-      (safariHeight > suppliedHeight ? suppliedHeight : safariHeight) +
-      "px;";
+      "height:" + (height > suppliedHeight ? suppliedHeight : height) + "px;";
   }
   modalBody.style = style;
 };
@@ -113,9 +109,7 @@ const setIframeStyle = function (suppliedHeight, isMobile, isTablet, isSafari) {
   } else if (isSafari) {
     style =
       "height:" +
-      (safariModalHeight > suppliedHeight
-        ? suppliedHeight
-        : safariModalHeight) +
+      (modalHeight > suppliedHeight ? suppliedHeight : modalHeight) +
       "px";
   }
   iframe.style = style;
