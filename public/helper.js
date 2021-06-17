@@ -55,7 +55,7 @@ const safariModalHeight = safariHeight - 50;
 const setModalDialogStyle = function (suppliedHeight, isMobile, isTablet) {
   const modalDialog = document.getElementById("modalDialog");
   let style = "";
-  if (!isMobile && !isTablet) {
+  if (!isMobile && !isTablet && !isSafari) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
     style = "height:" + height + "px;width:370px;right:2px;bottom:80px;";
@@ -70,7 +70,7 @@ const setModalDialogStyle = function (suppliedHeight, isMobile, isTablet) {
 const setModalBodyStyle = function (suppliedHeight, isMobile, isTablet) {
   const modalBody = document.getElementById("modalBody");
   let style = "";
-  if (!isMobile && !isTablet) {
+  if (!isMobile && !isTablet && !isSafari) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
     style =
@@ -88,7 +88,7 @@ const setModalBodyStyle = function (suppliedHeight, isMobile, isTablet) {
 const setIframeStyle = function (suppliedHeight, isMobile, isTablet) {
   const iframe = document.getElementById("myIframe");
   let style = "";
-  if (!isMobile && !isTablet) {
+  if (!isMobile && !isTablet && !isSafari) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
     style = "width: 350px;height:" + modalHeight + "px;";
@@ -102,7 +102,7 @@ const setIframeStyle = function (suppliedHeight, isMobile, isTablet) {
 
 const setBgImage = function (background, mobileBackground, isMobile, isTablet) {
   const bgimg = document.getElementById("bgimg");
-  if (!isMobile && !isTablet) {
+  if (!isMobile && !isTablet && !isSafari) {
     bgimg.src = background;
   } else if (isTablet || isSafari) {
     bgimg.src = background;
