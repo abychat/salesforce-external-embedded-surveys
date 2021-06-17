@@ -67,7 +67,10 @@ const setModalDialogStyle = function (
   } else if (isTablet) {
     style = "height:" + height + "px;";
   } else if (isSafari) {
-    style = "height:" + safariHeight + "px;";
+    style =
+      "height:" +
+      (safariHeight > suppliedHeight ? suppliedHeight : safariHeight) +
+      "px;";
   }
   modalDialog.style = style;
 };
@@ -90,7 +93,10 @@ const setModalBodyStyle = function (
   } else if (isTablet) {
     style = "height:" + height + "px;";
   } else if (isSafari) {
-    style = "height:" + safariHeight + "px;";
+    style =
+      "height:" +
+      (safariHeight > suppliedHeight ? suppliedHeight : safariHeight) +
+      "px;";
   }
   modalBody.style = style;
 };
@@ -105,7 +111,12 @@ const setIframeStyle = function (suppliedHeight, isMobile, isTablet, isSafari) {
   } else if (isTablet) {
     style = "height:" + modalHeight + "px;";
   } else if (isSafari) {
-    style = "height:" + safariModalHeight + "px;";
+    style =
+      "height:" +
+      (safariModalHeight > suppliedHeight
+        ? suppliedHeight
+        : safariModalHeight) +
+      "px";
   }
   iframe.style = style;
 };
