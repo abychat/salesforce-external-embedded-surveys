@@ -100,7 +100,13 @@ const setIframeStyle = function (suppliedHeight, isMobile, isTablet) {
   iframe.style = style;
 };
 
-const setBgImage = function (background, mobileBackground, isMobile, isTablet) {
+const setBgImage = function (
+  background,
+  mobileBackground,
+  isMobile,
+  isTablet,
+  isSafari
+) {
   const bgimg = document.getElementById("bgimg");
   if (!isMobile && !isTablet && !isSafari) {
     bgimg.src = background;
