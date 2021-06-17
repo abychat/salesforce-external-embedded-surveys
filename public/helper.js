@@ -28,6 +28,18 @@ const mobileCheck = function () {
   console.log(WURFL.is_mobile);
   console.log(WURFL.form_factor);
   alert(WURFL.form_factor);
+  alert(WURFL.is_mobile);
+  if (WURFL.is_mobile === true && WURFL.form_factor === "Smartphone") {
+    check = true;
+  }
+  return check;
+};
+
+const tabletCheck = function () {
+  let check = false;
+  console.log(WURFL.is_mobile);
+  console.log(WURFL.form_factor);
+  alert(WURFL.form_factor);
   if (WURFL.is_mobile === true && WURFL.form_factor === "Smartphone") {
     check = true;
   }
