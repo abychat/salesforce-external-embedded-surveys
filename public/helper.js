@@ -32,6 +32,7 @@ const mobileCheck = function () {
 };
 
 const tabletCheck = function () {
+  alert(WURFL.complete_device_name);
   let check = false;
   if (WURFL.is_mobile === true && WURFL.form_factor === "Tablet") {
     check = true;
