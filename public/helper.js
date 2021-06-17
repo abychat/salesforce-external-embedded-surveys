@@ -27,6 +27,7 @@ const mobileCheck = function () {
   let check = false;
   console.log(WURFL.is_mobile);
   console.log(WURFL.form_factor);
+  alert(WURFL.form_factor);
   if (WURFL.is_mobile === true && WURFL.form_factor === "Smartphone") {
     check = true;
   }
