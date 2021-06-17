@@ -52,7 +52,12 @@ const modalHeight = height - 50;
 const safariHeight = window.innerHeight - 300;
 const safariModalHeight = safariHeight - 50;
 
-const setModalDialogStyle = function (suppliedHeight, isMobile, isTablet) {
+const setModalDialogStyle = function (
+  suppliedHeight,
+  isMobile,
+  isTablet,
+  isSafari
+) {
   const modalDialog = document.getElementById("modalDialog");
   let style = "";
   if (!isMobile && !isTablet && !isSafari) {
@@ -67,7 +72,12 @@ const setModalDialogStyle = function (suppliedHeight, isMobile, isTablet) {
   modalDialog.style = style;
 };
 
-const setModalBodyStyle = function (suppliedHeight, isMobile, isTablet) {
+const setModalBodyStyle = function (
+  suppliedHeight,
+  isMobile,
+  isTablet,
+  isSafari
+) {
   const modalBody = document.getElementById("modalBody");
   let style = "";
   if (!isMobile && !isTablet && !isSafari) {
@@ -85,7 +95,7 @@ const setModalBodyStyle = function (suppliedHeight, isMobile, isTablet) {
   modalBody.style = style;
 };
 
-const setIframeStyle = function (suppliedHeight, isMobile, isTablet) {
+const setIframeStyle = function (suppliedHeight, isMobile, isTablet, isSafari) {
   const iframe = document.getElementById("myIframe");
   let style = "";
   if (!isMobile && !isTablet && !isSafari) {
