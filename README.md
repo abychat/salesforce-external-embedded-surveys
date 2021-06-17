@@ -23,6 +23,7 @@ A live example of the app can be seen @ https://ac-embedded-surveys.herokuapp.co
 - A Heroku account
 - A Connected app with a digital certificate & Private key if you want to generate unique invitations for a contact and track their responses
 - For the best experience, limit the number of survey questions on each page to 1 or maximum 2.
+- See tips for hosting high quality images below.
 
 # Mobile Support
 
@@ -41,7 +42,8 @@ A live example of the app can be seen @ https://ac-embedded-surveys.herokuapp.co
 5. **IFRAME_HEIGHT** - The height of the Iframe within the Modal (recommended to be -50 of MODAL HEIGHT)
 6. **SURVEY_HAS_CONTACT** - Value that indicates whether the Survey is an Individual Survey or a generic survey. Valid values are YES or NO.
 7. **SURVEY_URL** - The URL for the survey if the value for **6** is NO.
-8. Follow the instructions in the rest of the README file if the answer to **6** is **YES**.
+8. **BG_FAKE_MOBILE** - The URL for the image of the Fake website background on a smartphone. The image URL should be publically accessible.
+9. Follow the instructions in the rest of the README file if the answer to **6** is **YES**.
 
 # Tips for Hosting High Quality Background Images
 
