@@ -32,7 +32,6 @@ const mobileCheck = function () {
 };
 
 const tabletCheck = function () {
-  alert(WURFL.complete_device_name);
   let check = false;
   if (WURFL.is_mobile === true && WURFL.form_factor === "Tablet") {
     check = true;
@@ -40,8 +39,18 @@ const tabletCheck = function () {
   return check;
 };
 
+const safariCheck = function () {
+  let check = false;
+  if (WURFL.complete_device_name === "Apple Safari") {
+    check = true;
+  }
+  return check;
+};
+
 const height = window.innerHeight - 100;
 const modalHeight = height - 50;
+const safariHeight = window.innerHeight - 300;
+const safariModalHeight = safariHeight - 50;
 
 const setModalDialogStyle = function (suppliedHeight, isMobile, isTablet) {
   const modalDialog = document.getElementById("modalDialog");
@@ -52,6 +61,8 @@ const setModalDialogStyle = function (suppliedHeight, isMobile, isTablet) {
     style = "height:" + height + "px;width:370px;right:2px;bottom:80px;";
   } else if (isTablet) {
     style = "height:" + height + "px;";
+  } else if (isSafari) {
+    style = "height:" + safariHeight + "px;";
   }
   modalDialog.style = style;
 };
@@ -68,6 +79,8 @@ const setModalBodyStyle = function (suppliedHeight, isMobile, isTablet) {
       "px;width:100%;padding-left: 0.5rem !important;overflow-y: auto";
   } else if (isTablet) {
     style = "height:" + height + "px;";
+  } else if (isSafari) {
+    style = "height:" + safariHeight + "px;";
   }
   modalBody.style = style;
 };
@@ -81,6 +94,8 @@ const setIframeStyle = function (suppliedHeight, isMobile, isTablet) {
     style = "width: 350px;height:" + modalHeight + "px;";
   } else if (isTablet) {
     style = "height:" + modalHeight + "px;";
+  } else if (isSafari) {
+    style = "height:" + safariModalHeight + "px;";
   }
   iframe.style = style;
 };
@@ -89,7 +104,7 @@ const setBgImage = function (background, mobileBackground, isMobile, isTablet) {
   const bgimg = document.getElementById("bgimg");
   if (!isMobile && !isTablet) {
     bgimg.src = background;
-  } else if (isTablet) {
+  } else if (isTablet || isSafari) {
     bgimg.src = background;
   } else if (isMobile) {
     bgimg.src = mobileBackground;
@@ -104,8 +119,9 @@ const setStyles = function (
 ) {
   const isMobile = mobileCheck();
   const isTablet = tabletCheck();
-  setBgImage(background, mobileBackground, isMobile, isTablet);
-  setModalDialogStyle(modalHeight, isMobile, isTablet);
-  setModalBodyStyle(modalHeight, isMobile, isTablet);
-  setIframeStyle(iframeHeight, isMobile, isTablet);
+  const isSafari = safariCheck();
+  setBgImage(background, mobileBackground, isMobile, isTablet, isSafari);
+  setModalDialogStyle(modalHeight, isMobile, isTablet, isSafari);
+  setModalBodyStyle(modalHeight, isMobile, isTablet, isSafari);
+  setIframeStyle(iframeHeight, isMobile, isTablet, isSafari);
 };
