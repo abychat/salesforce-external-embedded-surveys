@@ -25,10 +25,6 @@
 
 const mobileCheck = function () {
   let check = false;
-  console.log(WURFL.is_mobile);
-  console.log(WURFL.form_factor);
-  alert(WURFL.form_factor);
-  alert(WURFL.is_mobile);
   if (WURFL.is_mobile === true && WURFL.form_factor === "Smartphone") {
     check = true;
   }
@@ -37,10 +33,7 @@ const mobileCheck = function () {
 
 const tabletCheck = function () {
   let check = false;
-  console.log(WURFL.is_mobile);
-  console.log(WURFL.form_factor);
-  alert(WURFL.form_factor);
-  if (WURFL.is_mobile === true && WURFL.form_factor === "Smartphone") {
+  if (WURFL.is_mobile === true && WURFL.form_factor === "Tablet") {
     check = true;
   }
   return check;
@@ -49,48 +42,53 @@ const tabletCheck = function () {
 const height = window.innerHeight - 100;
 const modalHeight = height - 50;
 
-const setModalDialogStyle = function (suppliedHeight, isMobile) {
+const setModalDialogStyle = function (suppliedHeight, isMobile, isTablet) {
   const modalDialog = document.getElementById("modalDialog");
   let style = "";
-  if (!isMobile) {
+  if (!isMobile && !isTablet) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
     style = "height:" + height + "px;width:370px;right:2px;bottom:80px;";
-    //style = "height:630px;width:370px;right:2px;bottom:80px;";
+  } else if (isTablet) {
+    style = "height:" + height + "px;";
   }
   modalDialog.style = style;
 };
 
-const setModalBodyStyle = function (suppliedHeight, isMobile) {
+const setModalBodyStyle = function (suppliedHeight, isMobile, isTablet) {
   const modalBody = document.getElementById("modalBody");
   let style = "";
-  if (!isMobile) {
+  if (!isMobile && !isTablet) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
     style =
       "height:" +
       height +
       "px;width:100%;padding-left: 0.5rem !important;overflow-y: auto";
-    // "height:580px;width:100%;padding-left: 0.5rem !important;overflow-y: auto";
+  } else if (isTablet) {
+    style = "height:" + height + "px;";
   }
   modalBody.style = style;
 };
 
-const setIframeStyle = function (suppliedHeight, isMobile) {
+const setIframeStyle = function (suppliedHeight, isMobile, isTablet) {
   const iframe = document.getElementById("myIframe");
   let style = "";
-  if (!isMobile) {
+  if (!isMobile && !isTablet) {
     style = "height:" + suppliedHeight + "px";
   } else if (isMobile) {
-    //style = "width: 350px;height: 530px;";
     style = "width: 350px;height:" + modalHeight + "px;";
+  } else if (isTablet) {
+    style = "height:" + modalHeight + "px;";
   }
   iframe.style = style;
 };
 
-const setBgImage = function (background, mobileBackground, isMobile) {
+const setBgImage = function (background, mobileBackground, isMobile, isTablet) {
   const bgimg = document.getElementById("bgimg");
-  if (!isMobile) {
+  if (!isMobile && !isTablet) {
+    bgimg.src = background;
+  } else if (isTablet) {
     bgimg.src = background;
   } else if (isMobile) {
     bgimg.src = mobileBackground;
@@ -104,8 +102,9 @@ const setStyles = function (
   mobileBackground
 ) {
   const isMobile = mobileCheck();
-  setBgImage(background, mobileBackground, isMobile);
-  setModalDialogStyle(modalHeight, isMobile);
-  setModalBodyStyle(modalHeight, isMobile);
-  setIframeStyle(iframeHeight, isMobile);
+  const isTablet = tabletCheck();
+  setBgImage(background, mobileBackground, isMobile, isTablet);
+  setModalDialogStyle(modalHeight, isMobile, isTablet);
+  setModalBodyStyle(modalHeight, isMobile, isTablet);
+  setIframeStyle(iframeHeight, isMobile, isTablet);
 };
