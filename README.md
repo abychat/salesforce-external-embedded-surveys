@@ -28,7 +28,7 @@ A live example of the app can be seen @ https://ac-embedded-surveys.herokuapp.co
 
 - This app can be demoed from Desktop, Tablets and Mobile Phones.
 - Tested on iPad Pro (10.5 inch - best demoed in Landscapre orientation), iPhone XS and Samasung Galaxy S10(best demoed in Portrait for both).
-- **NOTE** - Smartphone Demo - Please supply an image for the BG_FAKE_MOBILE config var if you are planning to demo from mobile phone. The app will automatically switch between images for desktop and mobile based on form factor.
+- **NOTE** - Smartphone Demo - Please supply an image for the **BG_FAKE_MOBILE** config var if you are planning to demo from mobile phone. The app will automatically switch between images for desktop and mobile based on form factor.
 
 **[Add the URL of the website that hosts the survey as a trusted website.](https://help.salesforce.com/articleView?id=task_chat_trusted_site.htm&type=5)**
 
@@ -48,8 +48,10 @@ A live example of the app can be seen @ https://ac-embedded-surveys.herokuapp.co
 - [Install the Go Full Page Screen Capture Chrome Extension](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl?hl=en)
 - Use the tool to take full screen capture for laptop/desktop as well as in [mobile responsive view using Chrome Developer Tools](https://developer.chrome.com/docs/devtools/device-mode/) if you want to demo from a phone.
 - Upload both the pictures to your Google Photos account (work or personal).
-- Follow the instructions here to generate a URL for each Google Photo that can be used for the BG_FAKE and BG_FAKE_MOBILE config vars. Use only the value of the **src** atribute from the generated embed code. For example a generated code on the website could look like the following. 2Fz6Fn5zq_hh75oNLsyNqyGSHzPopHojN77Eu6GImw_3bb4JteONR_K8lnCY2nRbZQV9RD7ACVYvTHEEoW6oGt2GNkAVXzsGdHl1XI9JWwr9ojo3N7t5mYgqaux8lESdvi4mJTti4Ok=w2400?source=screenshot.guru"> <img src="**https://lh3.googleusercontent.com/2Fz6Fn5zq_hh75oNLsyNqyGSHzPopHojN77Eu6GImw_3bb4JteONR_K8lnCY2nRbZQV9RD7ACVYvTHEEoW6oGt2GNkAVXzsGdHl1XI9JWwr9ojo3N7t5mYgqaux8lESdvi4mJTti4Ok=w600-h315-p-k**" /> </a>
-
+- Follow the instructions here to generate a URL for each Google Photo that can be used for the BG_FAKE and BG_FAKE_MOBILE config vars. Use only the value of the **src** atribute from the generated embed code. For example a generated code on the website could look like the following. 
+```
+<a href="https://lh3.googleusercontent.com/2Fz6Fn5zq_hh75oNLsyNqyGSHzPopHojN77Eu6GImw_3bb4JteONR_K8lnCY2nRbZQV9RD7ACVYvTHEEoW6oGt2GNkAVXzsGdHl1XI9JWwr9ojo3N7t5mYgqaux8lESdvi4mJTti4Ok=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/2Fz6Fn5zq_hh75oNLsyNqyGSHzPopHojN77Eu6GImw_3bb4JteONR_K8lnCY2nRbZQV9RD7ACVYvTHEEoW6oGt2GNkAVXzsGdHl1XI9JWwr9ojo3N7t5mYgqaux8lESdvi4mJTti4Ok=w600-h315-p-k" /> </a>
+```
 # FOLLOW THESE STEPS IF YOU WANT TO GENERATE INDIVIDUAL SURVEYS FOR CONTACTS
 
 # Salesforce Connected App Set Up for Individual Surveys
