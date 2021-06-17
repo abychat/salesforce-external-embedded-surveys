@@ -20,6 +20,7 @@ const SURVEY_HAS_CONTACT = process.env.SURVEY_HAS_CONTACT;
 const CONTACT_ID = process.env.CONTACT_ID;
 const SURVEY_ID = process.env.SURVEY_ID;
 const COMMUNITY_ID = process.env.COMMUNITY_ID;
+const BG_FAKE_MOBILE = process.env.BG_FAKE_MOBILE;
 
 let jwttoken;
 const conn = new jsforce.Connection();
@@ -68,11 +69,14 @@ app.get("/", async function (req, res) {
   }
   res.render("index", {
     background: BG_FAKE,
+    mobileBackground: BG_FAKE_MOBILE,
     surveyUrl: surveyUrl,
     buttonClass: BUTTON_CLASS,
     buttonText: BUTTON_TEXT,
-    modalHeight: "height:" + process.env.MODAL_HEIGHT + "px",
-    iframeHeight: "height:" + process.env.IFRAME_HEIGHT + "px",
+    // modalHeight: "height:" + process.env.MODAL_HEIGHT + "px",
+    // iframeHeight: "height:" + process.env.IFRAME_HEIGHT + "px",
+    modalHeight: process.env.MODAL_HEIGHT,
+    iframeHeight: process.env.IFRAME_HEIGHT,
   });
 });
 //Run

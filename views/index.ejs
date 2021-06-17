@@ -16,8 +16,12 @@
       src="https://kit.fontawesome.com/b6e13b7e90.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+    <script src="/helper.js"></script>
   </head>
-  <body>
+  <body
+    onload="setStyles(<%= modalHeight%>,<%= iframeHeight%>,'<%= background%>','<%= mobileBackground%>' )"
+  >
     <!-- Modal -->
     <div
       class="modal custom"
@@ -28,9 +32,9 @@
       data-keyboard="false"
       data-backdrop="static"
     >
-      <div class="modal-dialog" style="<%= modalHeight%>">
+      <div class="modal-dialog" id="modalDialog">
         <div class="modal-content">
-          <div class="modal-body" style="<%= modalHeight%>">
+          <div class="modal-body" id="modalBody">
             <div style="float: right">
               <button
                 type="button"
@@ -39,17 +43,13 @@
                 aria-label="Close"
               ></button>
             </div>
-            <iframe
-              id="myIframe"
-              src="<%= surveyUrl%>"
-              style="<%= iframeHeight%>"
-            ></iframe>
+            <iframe id="myIframe" src="<%= surveyUrl%>"></iframe>
           </div>
         </div>
       </div>
     </div>
     <div class="index-container">
-      <img src="<%= background%>" style="width: 100%; height: auto" />
+      <img id="bgimg" src="" style="width: 100%; height: auto" />
       <div id="salesforce-surveys"></div>
     </div>
     <button

@@ -7,7 +7,7 @@
   "image": "heroku/nodejs",
   "env": {
     "BG_FAKE": {
-      "description": "The URL for the Fake website background",
+      "description": "The URL for the Fake website background for demoing from a Desktop or Tablet",
       "value": "Your value here"
     },
     "SURVEY_URL": {
@@ -69,6 +69,10 @@
       "description": "The Id of the Community to which the individual survey link will be tied to [REQUIRED if SURVEY_HAS_CONTACT = YES]",
       "value": "Community ID",
       "required": false
+    },
+    "BG_FAKE_MOBILE": {
+      "description": "The URL for the Fake website background if demoing from a Smart Phone",
+      "value": "Your value here"
     }
   }
 }
