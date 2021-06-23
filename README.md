@@ -50,7 +50,7 @@ A live example of the app can be seen @ https://ac-embedded-surveys.herokuapp.co
 - [Install the Go Full Page Screen Capture Chrome Extension](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl?hl=en)
 - Use the tool to take full screen capture for laptop/desktop as well as in [mobile responsive view using Chrome Developer Tools](https://developer.chrome.com/docs/devtools/device-mode/) if you want to demo from a phone.
 - Upload both the pictures to your Google Photos account (work or personal).
-- Follow the instructions here to generate a URL for each Google Photo that can be used for the BG_FAKE and BG_FAKE_MOBILE config vars. Use only the value of the **src** attribute of the **img** tag (without the "") from the generated embed code. For example a generated code on the website could look like the following. 
+- [Follow the instructions here](https://www.labnol.org/embed/google/photos/) to generate a URL for each Google Photo that can be used for the BG_FAKE and BG_FAKE_MOBILE config vars. Use only the value of the **src** attribute of the **img** tag (without the "") from the generated embed code. For example a generated code on the website could look like the following. 
 ```
 <a href="https://lh3.googleusercontent.com/2Fz6Fn5zq_hh75oNLsyNqyGSHzPopHojN77Eu6GImw_3bb4JteONR_K8lnCY2nRbZQV9RD7ACVYvTHEEoW6oGt2GNkAVXzsGdHl1XI9JWwr9ojo3N7t5mYgqaux8lESdvi4mJTti4Ok=w2400?source=screenshot.guru"> 
 <img src="https://lh3.googleusercontent.com/2Fz6Fn5zq_hh75oNLsyNqyGSHzPopHojN77Eu6GImw_3bb4JteONR_K8lnCY2nRbZQV9RD7ACVYvTHEEoW6oGt2GNkAVXzsGdHl1XI9JWwr9ojo3N7t5mYgqaux8lESdvi4mJTti4Ok=w600-h315-p-k" /> </a>
@@ -92,7 +92,7 @@ Once you have generated the ceritifcate and private key set up the connect up by
 # Install Apex Service for generating the Individual Survey Link
 
 [Apex Service Package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e0000005htQAAQ)
-
+**NOTE** - On the Package install screen, click 'Advanced Options' and select **'Compile only the Apex in the Package'** before clicking 'Install
 # Additional Configuration Variables for the Heroku App
 
 1. **CLIENT_ID** - Consumer Key from the Connected App
